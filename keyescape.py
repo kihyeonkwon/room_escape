@@ -8,8 +8,16 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
 
-# 시작시간 설정
-# booking_time = datetime.datetime(2023, 4, 1, 10, 0, 0)
+# 세팅
+booking_time = datetime.datetime(2023, 4, 1, 10, 0, 0)
+place = '우주라이크'
+whendate = '31'
+theme = 'US'
+whentime = '17:55  '
+personNumber = '6 명'
+myName = '권기현'
+myPhone1 = '3265'
+myPhone2 = '6909'
 
 # # calculate the number of seconds until the booking time
 # time_delta = booking_time - datetime.datetime.now()
@@ -24,12 +32,6 @@ browser = webdriver.Chrome(chrome_options=chrome_options)
 # navigate to the ticket booking website
 browser.get('https://keyescape.co.kr/web/home.php?go=rev.make')
 
-# 세팅
-place = '우주라이크'
-whendate = '31'
-theme = 'US'
-whentime = '17:55  '
-personNumber = '6 명'
 
 placeBtn = browser.find_element(By.XPATH, f"//*[text()='{place}']")
 placeBtn.click()
@@ -71,9 +73,9 @@ mobile2Input = browser.find_element(By.NAME, 'mobile2')
 mobile3Input = browser.find_element(By.NAME, 'mobile3')
 personInput = browser.find_element(By.NAME, 'person')
 
-nameInput.send_keys('권기현')
-mobile2Input.send_keys('3265')
-mobile3Input.send_keys('6909')
+nameInput.send_keys(myName)
+mobile2Input.send_keys(myPhone1)
+mobile3Input.send_keys(myPhone2)
 personInput.click()
 personNumberBtn = browser.find_element(
     By.XPATH, f"//*[text()='{personNumber}']")

@@ -11,9 +11,9 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 # 세팅
 booking_time = datetime.datetime(2023, 4, 1, 10, 0, 0)
 place = '우주라이크'
-whendate = '31'
+whendate = '30'
 theme = 'US'
-whentime = '17:55  '
+whentime = '09:55  '
 personNumber = '6 명'
 myName = '권기현'
 myPhone1 = '3265'
